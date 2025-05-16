@@ -6,11 +6,11 @@
   "main": "electron.cjs",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "electron:dev": "cross-env NODE_ENV=development concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
-    "electron:prod": "npm run build && cross-env NODE_ENV=production electron ."
+    "electron:dev": "concurrently \"cross-env BROWSER=none npm run dev\" \"wait-on tcp:5173 && cross-env NODE_ENV=development electron .\"",
+    "electron:build": "npm run build && electron-builder"
   },
   "dependencies": {
     "react": "^19.1.0",
@@ -24,6 +24,7 @@
     "concurrently": "^9.1.2",
     "cross-env": "^7.0.3",
     "electron": "^36.2.1",
+    "electron-builder": "^26.0.12",
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
@@ -44,5 +45,17 @@
   "bugs": {
     "url": "https://github.com/Sathvik265/Ajanta-Hotel/issues"
   },
-  "homepage": "https://github.com/Sathvik265/Ajanta-Hotel#readme"
+  "homepage": "https://github.com/Sathvik265/Ajanta-Hotel#readme",
+  "build": {
+    "appId": "com.hotelmanager.app",
+    "productName": "Hotel Ajanta",
+    "files": [
+      "dist/**/*",
+      "electron.cjs"
+    ],
+    "directories": {
+      "buildResources": "assets",
+      "output": "release"
+    }
+  }
 }
