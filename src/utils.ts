@@ -1,7 +1,7 @@
 // Utility functions for local storage and offline support
-import type { Room } from './types';
+import type { Room } from "./types";
 
-const STORAGE_KEY = 'hotel_manager_rooms_v1';
+const STORAGE_KEY = "hotel_manager_rooms_v1";
 
 export function saveRoomsToStorage(rooms: Room[]) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(rooms));

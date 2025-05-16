@@ -1,6 +1,6 @@
 // Room state types for the hotel manager app
 
-export type RoomStatus = 'available' | 'occupied' | 'maintenance';
+export type RoomStatus = "available" | "occupied" | "maintenance";
 
 export interface OccupantData {
   name: string;
