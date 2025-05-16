@@ -1,46 +1,69 @@
 # Ajanta Hotel
 
-This is an offline-capable room tracking app built with Vite, React, and TypeScript. It displays a grid of up to 300 rooms and allows you to:
-
-- **Occupy** a room
-- **Release** a room
-- **Set a room to unavailable for maintenance**
-- **View local history of all changes per room**
-- **Works offline and stores all data locally**
+Ajanta Hotel is an offline room tracking app built with Vite, React, and TypeScript. It supports features like room occupancy/maintenance toggling, local history per room, and offline/local storage support.
 
 ## Features
 
-- Modern, clean UI
-- Fast, responsive grid for up to 300 rooms
-- Local storage for offline support and persistent history
-- Modular, maintainable codebase
+- Grid of up to 300 rooms
+- Toggle room status (available, occupied, maintenance)
+- Local history tracking for each room
+- Offline/local storage support
 
-## Getting Started
+## How to Download and Run the App
 
-1. Install dependencies:
-   ```powershell
+### Download the App
+
+1. Visit the repository: [Ajanta Hotel](https://github.com/Sathvik265/Ajanta-Hotel).
+2. Click the green **Code** button and select **Download ZIP**.
+3. Extract the ZIP file to access the project files.
+
+Alternatively, clone the repository using Git:
+
+```bash
+git clone https://github.com/Sathvik265/Ajanta-Hotel.git
+```
+
+### Run the App Locally
+
+1. Open a terminal in the project folder.
+2. Install dependencies:
+   ```bash
    npm install
    ```
-2. Start the development server:
-   ```powershell
+3. Start the development server:
+   ```bash
    npm run dev
    ```
-3. Open the app in your browser at the provided local address.
+4. Open the provided local URL (e.g., `http://localhost:3000`) in your browser to view the app.
 
-## Building for Production
+### Build for Production
 
-```powershell
+To create a production build of the app:
+
+```bash
 npm run build
 ```
 
-## Project Structure
+The build output will be in the `dist` folder.
 
-- `src/` — Main source code (components, logic, styles)
-- `public/` — Static assets
+## Deployment
+
+This app is configured for deployment on GitHub Pages. To deploy:
+
+1. Build the app:
+   ```bash
+   npm run build
+   ```
+2. Push the `dist` folder to the `gh-pages` branch:
+   ```bash
+   git add dist -f
+   git commit -m "Deploy to GitHub Pages"
+   git subtree push --prefix dist origin gh-pages
+   ```
 
 ## License
 
-MIT
+This project is licensed under the MIT License.
 
 ---
 

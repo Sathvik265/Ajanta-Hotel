@@ -3,6 +3,6 @@ import react from "@vitejs/plugin-react";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "./", // Use relative asset paths for Electron
+  base: "/Ajanta-Hotel/", // Set base to the repository name for GitHub Pages
   plugins: [react()],
 });
