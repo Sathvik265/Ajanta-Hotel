@@ -9,128 +9,46 @@ Ajanta Hotel is an offline room tracking app built with Vite, React, and TypeScr
 - Local history tracking for each room
 - Offline/local storage support
 
-## How to Download and Run the App
+## How to Download and Run the App Locally
 
-### Download the App
+### Steps to Run the App
 
-1. Visit the repository: [Ajanta Hotel](https://github.com/Sathvik265/Ajanta-Hotel).
-2. Click the green **Code** button and select **Download ZIP**.
-3. Extract the ZIP file to access the project files.
+1. **Download the App**:
 
-Alternatively, clone the repository using Git:
+   - Go to the repository: [Ajanta Hotel](https://github.com/Sathvik265/Ajanta-Hotel).
+   - Click the green **Code** button and select **Download ZIP**.
+   - Extract the ZIP file to a folder on your computer.
 
-```bash
-git clone https://github.com/Sathvik265/Ajanta-Hotel.git
-```
+2. **Install Node.js**:
 
-### Run the App Locally
+   - Download and install [Node.js](https://nodejs.org/).
 
-1. Open a terminal in the project folder.
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-4. Open the provided local URL (e.g., `http://localhost:3000`) in your browser to view the app.
+3. **Open the Folder**:
 
-### Run the App Using Electron
+   - Open the extracted folder in a terminal or command prompt.
 
-1. For development mode:
-   ```bash
-   npm run electron:dev
-   ```
-2. For production mode:
-   ```bash
-   npm run electron:build
-   ```
+4. **Install Dependencies**:
 
-### Build for Production
+   - Run the following command to install all required dependencies:
+     ```bash
+     npm install
+     ```
 
-To create a production build of the app:
+5. **Run the App**:
 
-```bash
-npm run build
-```
+   - To run the app in development mode:
+     ```bash
+     npm run electron:dev
+     ```
+   - This will open the app in an Electron window, and all data will be saved locally on your system.
 
-The build output will be in the `dist` folder.
-
-## Deployment
-
-This app is configured for deployment on GitHub Pages. To deploy:
-
-1. Build the app:
-   ```bash
-   npm run build
-   ```
-2. Push the `dist` folder to the `gh-pages` branch:
-   ```bash
-   git add dist -f
-   git commit -m "Deploy to GitHub Pages"
-   git subtree push --prefix dist origin gh-pages
-   ```
+6. **Build the App for Production** (Optional):
+   - To create a production-ready version of the app:
+     ```bash
+     npm run electron:build
+     ```
+   - This will generate an executable file that you can use to run the app without needing a terminal.
 
 ## License
 
 This project is licensed under the MIT License.
-
----
-
-_This project was bootstrapped with Vite + React + TypeScript._
-
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    "react-x": reactX,
-    "react-dom": reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs["recommended-typescript"].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
-```
