@@ -36,6 +36,17 @@ git clone https://github.com/Sathvik265/Ajanta-Hotel.git
    ```
 4. Open the provided local URL (e.g., `http://localhost:3000`) in your browser to view the app.
 
+### Run the App Using Electron
+
+1. For development mode:
+   ```bash
+   npm run electron:dev
+   ```
+2. For production mode:
+   ```bash
+   npm run electron:build
+   ```
+
 ### Build for Production
 
 To create a production build of the app:
